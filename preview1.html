@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEST 1–10</title>
+
+<style>
+body{
+font-family:Arial;
+background:#eef2f7;
+margin:0;
+padding:15px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+}
+
+.question{
+margin-bottom:20px;
+padding:15px;
+border-left:5px solid #3498db;
+background:#fafafa;
+}
+
+.correct{border-left-color:#2ecc71;background:#eafaf1}
+.wrong{border-left-color:#e74c3c;background:#fdecea}
+
+table{
+width:100%;
+margin-top:10px;
+border-collapse:collapse;
+}
+
+button{
+padding:12px;
+background:#3498db;
+color:#fff;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* 📱 TELEFON UCHUN */
+@media(max-width:600px){
+
+body{
+padding:10px;
+font-size:16px;
+}
+
+.container{
+padding:12px;
+}
+
+.question{
+padding:12px;
+}
+
+table{
+font-size:14px;
+}
+
+button{
+width:100%;
+margin-top:10px;
+font-size:18px;
+}
+
+select{
+width:100%;
+padding:8px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>TEST 1–10</h2>
+
+<!-- 1 -->
+<div class="question" id="q1box">
+<p>Question 2 of 132 Which practice helps keep your online accounts secure?</p>
+<label><input type="radio" name="q1" value="A"> A. Share your password with trusted friends</label><br>
+<label><input type="radio" name="q1" value="B"> B. Use the same password for all accounts</label><br>
+<label><input type="radio" name="q1" value="C"> C. Use strong, unique passwords for each account</label><br>
+<label><input type="radio" name="q1" value="D"> D. Write your password on paper near your computer</label>
+</div>
+
+<!-- 2 -->
+<div class="question" id="q2box">
+<p>Question 21 of 132 For each statement, select True or False.</p>
+
+<table>
+<tr><th></th><th>True</th><th>False</th></tr>
+
+<tr><td>Web pages are more credible if they cite sources for their content</td>
+<td><input type="radio" name="q2_1" value="T"></td>
+<td><input type="radio" name="q2_1" value="F"></td></tr>
+
+<tr><td>You know a source is reliable when the website address ends in .org</td>
+<td><input type="radio" name="q2_2" value="T"></td>
+<td><input type="radio" name="q2_2" value="F"></td></tr>
+
+<tr><td>Consulting multiple sources is a good way to determine a site's accuracy</td>
+<td><input type="radio" name="q2_3" value="T"></td>
+<td><input type="radio" name="q2_3" value="F"></td></tr>
+
+<tr><td>A search engine differentiates between good and bad sites. The first results are usually the most reliable</td>
+<td><input type="radio" name="q2_4" value="T"></td>
+<td><input type="radio" name="q2_4" value="F"></td></tr>
+
+</table>
+</div>
+
+<!-- 3 -->
+<div class="question" id="q3box">
+<p>Question 25 of 132 What is the first thing you should consider when preparing a digital presentation to ensure it can be viewed effectively on various devices?</p>
+<label><input type="radio" name="q3" value="A"> A. Use many transitions and animations</label><br>
+<label><input type="radio" name="q3" value="B"> B. Optimize file size of images and videos for quick loading</label><br>
+<label><input type="radio" name="q3" value="C"> C. Use fancy decorative fonts</label><br>
+<label><input type="radio" name="q3" value="D"> D. Put as much text as possible on slides</label>
+</div>
+
+<!-- 4 -->
+<div class="question" id="q4box">
+<p>Question 29 of 132 Which term describes unwanted email messages that are sent in bulk?</p>
+<label><input type="radio" name="q4" value="A"> A. Spam</label><br>
+<label><input type="radio" name="q4" value="B"> B. Malware</label><br>
+<label><input type="radio" name="q4" value="C"> C. Phishing</label><br>
+<label><input type="radio" name="q4" value="D"> D. Encryption</label>
+</div>
+
+<!-- 5 -->
+<div class="question" id="q5box">
+<p>Question 30 of 132 Which two actions will increase audience engagement?</p>
+<label><input type="checkbox" name="q5" value="A"> A. Clearly read aloud the slide text</label><br>
+<label><input type="checkbox" name="q5" value="B"> B. Speak in a soothing monotone</label><br>
+<label><input type="checkbox" name="q5" value="C"> C. Encourage participation with polls or virtual hand-raising</label><br>
+<label><input type="checkbox" name="q5" value="D"> D. Have group members take turns presenting</label>
+</div>
+
+<!-- 6 -->
+<div class="question" id="q6box">
+<p>Question 37 of 132 Which option is recommended for creating a secure password you can remember?</p>
+<label><input type="radio" name="q6" value="A"> A. Use your social media profile name</label><br>
+<label><input type="radio" name="q6" value="B"> B. Use your favorite color and animal</label><br>
+<label><input type="radio" name="q6" value="C"> C. Use parts of a random phrase</label><br>
+<label><input type="radio" name="q6" value="D"> D. Use a name with a number at the end</label>
+</div>
+
+<!-- 7 -->
+<div class="question" id="q7box">
+<p>Question 44 of 132 Which two website criteria are design constraints? (Choose 2.)</p>
+<label><input type="checkbox" name="q7" value="A"> A. It must be quick to load.</label><br>
+<label><input type="checkbox" name="q7" value="B"> B. It must provide a method for students to indicate why they will be absent.</label><br>
+<label><input type="checkbox" name="q7" value="C"> C. It must be complete in two weeks.</label><br>
+<label><input type="checkbox" name="q7" value="D"> D. It must be easy to use.</label>
+</div>
+
+<!-- 8 -->
+<div class="question" id="q8box">
+<p>Question 45 of 132 What is the first thing you should consider when preparing a digital presentation to ensure it can be viewed effectively on various devices?</p>
+<label><input type="radio" name="q8" value="A"> A. Include as much text as possible on each slide to keep the total number of slides low</label><br>
+<label><input type="radio" name="q8" value="B"> B. Use a variety of transitions and animations to keep the audience engaged</label><br>
+<label><input type="radio" name="q8" value="C"> C. The file size of the images and videos should be optimized to ensure quick loading times and smooth playback</label><br>
+<label><input type="radio" name="q8" value="D"> D. The font style used in the presentation should be fancy and decorative to make it visually appealing</label>
+</div>
+
+<!-- 9 -->
+<div class="question" id="q9box">
+<p>Question 47 of 132 You are trying to access a website, but it is not loading properly on your browser. What should you try first?</p>
+<label><input type="radio" name="q9" value="A"> A. Clear the browser cache</label><br>
+<label><input type="radio" name="q9" value="B"> B. Email the website owner</label><br>
+<label><input type="radio" name="q9" value="C"> C. Check the BIOS settings</label><br>
+<label><input type="radio" name="q9" value="D"> D. Remove unnecessary apps</label>
+</div>
+
+<!-- 10 -->
+<div class="question" id="q10box">
+<p>Question 56 of 132 Correct order:</p>
+<select id="q10">
+<option value="">Select</option>
+<option value="A">Identify project requirements → Generate ideas → Develop the prototype → Test the prototype → Refine the prototype</option>
+<option value="B">Generate ideas → Identify project requirements → Develop the prototype → Test → Refine</option>
+<option value="C">Develop → Ideas → Requirements → Test → Refine</option>
+</select>
+</div>
+
+<button onclick="check()">Natijani ko‘rish</button>
+<div id="result"></div>
+
+</div>
+
+<script>
+function check(){
+let score=0;
+
+const ans={
+q1:"C",
+q3:"B",
+q4:"A",
+q6:"C",
+q8:"C",
+q9:"A"
+};
+
+// radio questions
+["q1","q3","q4","q6","q8","q9"].forEach(q=>{
+let s=document.querySelector(`[name="${q}"]:checked`);
+if(s && s.value===ans[q]){
+  score++;
+  document.getElementById(q+"box").className="question correct";
+}else{
+  document.getElementById(q+"box").className="question wrong";
+}
+});
+
+// q2 True/False
+let q2=["T","F","T","F"];
+let u2=[
+document.querySelector('[name="q2_1"]:checked')?.value,
+document.querySelector('[name="q2_2"]:checked')?.value,
+document.querySelector('[name="q2_3"]:checked')?.value,
+document.querySelector('[name="q2_4"]:checked')?.value
+];
+if(JSON.stringify(q2)==JSON.stringify(u2)){
+  score++;
+  q2box.className="question correct";
+}else q2box.className="question wrong";
+
+// q5 checkbox
+let q5=[...document.querySelectorAll('[name="q5"]:checked')].map(x=>x.value).sort().join("");
+if(q5==="CD"){
+  score++;
+  q5box.className="question correct";
+}else q5box.className="question wrong";
+
+// q7 checkbox
+let q7=[...document.querySelectorAll('[name="q7"]:checked')].map(x=>x.value).sort().join("");
+if(q7==="AC"){
+  score++;
+  q7box.className="question correct";
+}else q7box.className="question wrong";
+
+// ✅ q10 ORDER (to‘liq tuzatilgan)
+let q10 = document.getElementById("q10").value;
+if(q10==="A"){
+  score++;
+  q10box.className="question correct";
+}else{
+  q10box.className="question wrong";
+}
+
+result.innerHTML="To‘g‘ri: "+score+"/10 | "+(score*10)+"%";
+}
+</script>
+
+</body>
+</html>

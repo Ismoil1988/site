@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TEST 61–67</title>
+
+<style>
+body{
+font-family:Arial;
+background:#eef2f7;
+margin:0;
+padding:15px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+}
+
+.question{
+margin-bottom:20px;
+padding:15px;
+border-left:5px solid #3498db;
+background:#fafafa;
+}
+
+.correct{border-left-color:#2ecc71;background:#eafaf1}
+.wrong{border-left-color:#e74c3c;background:#fdecea}
+
+table{
+width:100%;
+margin-top:10px;
+border-collapse:collapse;
+}
+
+button{
+padding:12px;
+background:#3498db;
+color:#fff;
+border:none;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+/* 📱 TELEFON UCHUN */
+@media(max-width:600px){
+
+body{
+padding:10px;
+font-size:16px;
+}
+
+.container{
+padding:12px;
+}
+
+.question{
+padding:12px;
+}
+
+table{
+font-size:14px;
+}
+
+button{
+width:100%;
+margin-top:10px;
+font-size:18px;
+}
+
+select{
+width:100%;
+padding:8px;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h2>TEST 61–67</h2>
+
+<!-- 130 -->
+<div class="question" id="q1box">
+<p>Question 130 of 132 Which two video editing methods can alter a video to change its original meaning? (Choose 2)</p>
+
+<label><input type="checkbox" name="q1" value="A"> A.Showing a short clip out of context</label><br>
+<label><input type="checkbox" name="q1" value="B"> B.Editing together clips from different videos</label><br>
+<label><input type="checkbox" name="q1" value="C"> C. Adding credits</label><br>
+<label><input type="checkbox" name="q1" value="D"> D. Including references</label>
+</div>
+
+<!-- 131 -->
+<div class="question" id="q2box">
+<p>Question 131 of 132 Which two actions will improve the readability of a document? (Choose 2)</p>
+
+<label><input type="checkbox" name="q2" value="A"> A.Use all capital letters</label><br>
+<label><input type="checkbox" name="q2" value="B"> B.Use a strong contrast between text and background</label><br>
+<label><input type="checkbox" name="q2" value="C"> C.Use slight spacing between lines of text</label><br>
+<label><input type="checkbox" name="q2" value="D"> D. Use decorative fonts</label>
+</div>
+
+<!-- 132 -->
+<div class="question" id="q3box">
+<p>Question 132 of 132 Which two actions will improve communication skills when working with a client? (Choose 2)</p>
+
+<label><input type="checkbox" name="q3" value="A"> A. Summarize the question before answering</label><br>
+<label><input type="checkbox" name="q3" value="B"> B. Send a text message to apologize for poor communication</label><br>
+<label><input type="checkbox" name="q3" value="C"> C. Have another team member take over communication</label><br>
+<label><input type="checkbox" name="q3" value="D"> D. Speak in a positive and respectful tone</label>
+</div>
+
+<!-- 133 -->
+<div class="question" id="q4box">
+<p>Question 133.Which two actions can you take to improve your communication skills? (Choose 2)</p>
+
+<label><input type="checkbox" name="q4" value="A"> A. When talking with the client, speak in a positive, respectful tone.</label><br>
+<label><input type="checkbox" name="q4" value="B"> B. Text the client to apologize for your poor communication.</label><br>
+<label><input type="checkbox" name="q4" value="C"> C. When the client asks questions, summarize the question before you answer.</label><br>
+<label><input type="checkbox" name="q4" value="D"> D. Have another team member take over the communication at the next meeting.</label>
+</div>
+
+<!-- 134 -->
+<div class="question" id="q5box">
+<p>134 Which two ways do cloud computing data centers negatively impact the environment? (Choose 2)</p>
+
+<label><input type="checkbox" name="q5" value="A"> A.They use chemical coolants made from hazardous materials</label><br>
+<label><input type="checkbox" name="q5" value="B"> B.They dump waste heat into water sources</label><br>
+<label><input type="checkbox" name="q5" value="C"> C.They are built in cold climates that harm wildlife</label><br>
+<label><input type="checkbox" name="q5" value="D"> D.They use a significant amount of electricity from non-renewable sources</label>
+</div>
+
+<!-- 135 -->
+<div class="question" id="q6box">
+<p>135 Which two design criteria are considered constraints when building a website?
+(Choose 2)</p>
+
+<label><input type="checkbox" name="q6" value="A"> A.It must be easy to use</label><br>
+<label><input type="checkbox" name="q6" value="B"> B.It must be completed in two weeks</label><br>
+<label><input type="checkbox" name="q6" value="C"> C.It must allow users to submit reasons</label><br>
+<label><input type="checkbox" name="q6" value="D"> D.It must load quickly</label>
+</div>
+
+<!-- 136 -->
+<div class="question" id="q7box">
+<p>136 Which scenario would NOT be considered fair use of a video clip?</p>
+
+<table>
+<tr><th>Scenario</th><th>Status</th></tr>
+<tr>
+<td>Using the clip in a parody</td>
+<td>
+<select id="q7_1">
+<option value="">Select</option>
+<option value="Fair">Fair use</option>
+<option value="Not">Not fair use</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Using the clip in a political advertisement</td>
+<td>
+<select id="q7_2">
+<option value="">Select</option>
+<option value="Fair">Fair use</option>
+<option value="Not">Not fair use</option>
+</select>
+</td>
+</tr>
+
+</table>
+</div>
+
+<button onclick="check()">Natijani ko‘rish</button>
+<div id="result"></div>
+
+</div>
+
+<script>
+function check(){
+let score=0;
+
+if([...document.querySelectorAll('[name="q1"]:checked')].map(x=>x.value).sort().join("")==="AB"){score++;q1box.className="question correct";} else q1box.className="question wrong";
+
+if([...document.querySelectorAll('[name="q2"]:checked')].map(x=>x.value).sort().join("")==="BC"){score++;q2box.className="question correct";} else q2box.className="question wrong";
+
+if([...document.querySelectorAll('[name="q3"]:checked')].map(x=>x.value).sort().join("")==="AD"){score++;q3box.className="question correct";} else q3box.className="question wrong";
+
+if([...document.querySelectorAll('[name="q4"]:checked')].map(x=>x.value).sort().join("")==="AC"){score++;q4box.className="question correct";} else q4box.className="question wrong";
+
+if([...document.querySelectorAll('[name="q5"]:checked')].map(x=>x.value).sort().join("")==="AD"){score++;q5box.className="question correct";} else q5box.className="question wrong";
+
+if([...document.querySelectorAll('[name="q6"]:checked')].map(x=>x.value).sort().join("")==="BD"){score++;q6box.className="question correct";} else q6box.className="question wrong";
+
+let s1=document.getElementById("q7_1").value;
+let s2=document.getElementById("q7_2").value;
+if(s1==="Fair" && s2==="Not"){score++;q7box.className="question correct";}
+else q7box.className="question wrong";
+
+result.innerHTML="To‘g‘ri: "+score+"/7 | "+(score*100/7).toFixed(0)+"%";
+}
+</script>
+
+</body>
+</html>

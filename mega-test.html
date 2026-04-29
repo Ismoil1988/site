@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MEGA TEST</title>
+
+<style>
+body{
+font-family:Arial;
+background:#eef2f7;
+margin:0;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+background:#fff;
+padding:15px;
+}
+
+h2{
+text-align:center;
+}
+
+/* BUTTONLAR */
+.buttons{
+display:flex;
+flex-wrap:wrap;
+gap:5px;
+justify-content:center;
+}
+
+button{
+padding:12px;
+border:none;
+background:#3498db;
+color:white;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+/* IFRAME */
+iframe{
+width:100%;
+height:700px;
+border:none;
+margin-top:15px;
+border-radius:8px;
+}
+
+/* PROGRESS */
+.progress{
+height:10px;
+background:#ddd;
+margin-top:10px;
+border-radius:5px;
+overflow:hidden;
+}
+
+.bar{
+height:10px;
+background:#2ecc71;
+width:0%;
+}
+
+/* RESULT */
+#globalResult{
+margin-top:15px;
+font-size:18px;
+font-weight:bold;
+}
+
+/* 📱 TELEFON */
+@media(max-width:600px){
+
+button{
+width:100%;
+font-size:18px;
+}
+
+iframe{
+height:500px;
+}
+
+.container{
+padding:10px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📘 MEGA TEST</h2>
+
+<!-- BUTTONLAR -->
+<div class="buttons">
+<button onclick="go(1)">1–10</button>
+<button onclick="go(2)">11–20</button>
+<button onclick="go(3)">21–30</button>
+<button onclick="go(4)">31–40</button>
+<button onclick="go(5)">41–50</button>
+<button onclick="go(6)">51–60</button>
+<button onclick="go(7)">61–70</button>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress">
+<div class="bar" id="bar"></div>
+</div>
+
+<!-- TEST -->
+<iframe id="frame" src="preview1.html"></iframe>
+
+<!-- NAV -->
+<div class="buttons">
+<button onclick="prev()">⬅️ Oldingi</button>
+<button onclick="next()">➡️ Keyingi</button>
+</div>
+
+<!-- GLOBAL -->
+<div style="text-align:center;">
+<button onclick="showGlobal()">📊 Umumiy natija</button>
+<div id="globalResult"></div>
+</div>
+
+</div>
+
+<script>
+
+let current = 1;
+
+const files = [
+"preview1.html",
+"preview2.html",
+"preview3.html",
+"preview4.html",
+"preview5.html",
+"preview6.html",
+"preview7.html"
+];
+
+function go(n){
+current = n;
+document.getElementById("frame").src = files[n-1];
+updateBar();
+}
+
+function next(){
+if(current < files.length){
+current++;
+go(current);
+}
+}
+
+function prev(){
+if(current > 1){
+current--;
+go(current);
+}
+}
+
+function updateBar(){
+document.getElementById("bar").style.width =
+(current / files.length * 100) + "%";
+}
+
+/* GLOBAL SCORE */
+function showGlobal(){
+
+let totalScore = 0;
+let totalQuestions = files.length * 10;
+
+let text = "";
+
+for(let i=1; i<=files.length; i++){
+
+let s = localStorage.getItem("score_page"+i);
+
+if(s){
+totalScore += Number(s);
+text += ( (i-1)*10+1 ) + "–" + (i*10) + ": " + s + "/10<br>";
+}else{
+text += ( (i-1)*10+1 ) + "–" + (i*10) + ": ❌ ishlanmagan<br>";
+}
+
+}
+
+let percent = (totalScore / totalQuestions) * 100;
+
+text += "<br><b>UMUMIY: " + totalScore + "/" + totalQuestions +
+" | " + percent.toFixed(1) + "%</b>";
+
+document.getElementById("globalResult").innerHTML = text;
+
+}
+
+updateBar();
+
+</script>
+
+</body>
+</html>
